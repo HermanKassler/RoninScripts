@@ -195,6 +195,9 @@ void function Server_SP_Init()
 	SP_IntroScreen_Init()
 
 	SP_TitanWeaponPickups_Init()
+
+	// Ronin
+	SRM_ForceMoonboots_Init()
 }
 
 void function ShSp_EntitiesDidLoad()
@@ -293,6 +296,8 @@ void function Client_SP_Init()
 	CL_TitanWeaponPickup_Init()
 	ClTitanCockpitSounds_Init()
 
+	// Ronin
+	dq_strafemeterPrecache()
 	MusicStopper_Init()
 }
 #endif // CLIENT
