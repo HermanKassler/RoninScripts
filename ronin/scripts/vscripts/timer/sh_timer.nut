@@ -84,7 +84,7 @@ string function GetCategoryShortName(string category)
         case "ALL HELMETS IL":
             return "AH IL"
         case "TOURNEY IL":
-            return "TRNY"
+            return "H2H"
     }
 
     return category
