@@ -102,8 +102,13 @@ void function SRM_SpeedometerUpdate()
 		RuiSetFloat3( file.speedometer, "msgColor", SRM_SpeedometerColorLerp( speed ) )
 		RuiSetFloat3( file.speedometerUnit, "msgColor", SRM_SpeedometerColorLerp( speed ) )
 		speed *= unitConversionModifier
-		// cut off decimals and then convert to string
-		RuiSetString( file.speedometer, "msgText", speed.tointeger().tostring() )
+
+		// ugly way to do pow(10, digits)
+		int pivot = [1, 10, 100][GetConVarInt("srm_speedometer_decimals")]
+
+		//round to the correct number of digits and convert to string
+		speed = (((speed * pivot).tointeger().tofloat())/pivot )
+		RuiSetString( file.speedometer, "msgText", speed.tostring() )
 	}
 }
 
