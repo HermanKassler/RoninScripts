@@ -9,6 +9,7 @@ void function SRM_InitSpeedometerSettingsMenu()
 	// functional settings
 	SRM_SetupNormalButton( "SwchSpeedometerUnit", "Unit", "Determines the measuring unit used for displaying the speed (kph/mph/u)\n\n`2Requires a reload for changes to take effect" )
 	SRM_SetupNormalButton( "SwchSpeedometerAxisMode", "Axis Mode", "Determine which axes the speedometer should measure" )
+	SRM_SetupNormalButton( "SwchSpeedometerDecimals", "Decimal Digits", "Determines how many decimal digits to show" )
 
 	// position
 	SRM_SetupSlider( "SldSpeedometerPositionX", "Position X", "Horizontal position of the Speedometer.\n`10.0`0 = Left\n`11.0`0 = Right"+mustReloadNote )
